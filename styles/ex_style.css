@@ -19,7 +19,9 @@ header {
   background: var(--Very-Pale-Cyan) url("../images/bg-hero-desktop.svg")
     no-repeat 0 / cover;
 }
-
+.brand_logo{
+  width: 25%;
+}
 .card {
   --Grayish-Blue-op: hsla(209, 11%, 55%, 0.075);
 
@@ -38,23 +40,14 @@ header {
   font-family: var(--font-family-open-sans);
   font-weight: 700 ;
 }
-.content {
-  position: relative;
-  /* height: 110%; */
-  padding-top: 5rem;
-}
+
 /* floating card */
 .e_card {
-  width: 60%;
-  height: 20rem;
-  max-height: 14rem;
-  position: absolute;
-  top: 93%;
-  left: 22%;
+   width: 100%;
+ 
+   transform:translateY(50%);
 }
-.img {
-  width: 20rem;
-}
+
 .btn {
   --Grayish-Blue-op-btn: hsla(209, 11%, 55%, 0.527);
   border-radius: 30px;
@@ -107,16 +100,18 @@ header {
 /* footer section start */
 .fh {
   /* height: 35%; */
+  padding-top: 10rem;
   background-color: var(--Very-Dark-Cyan);
   color: white;
 }
+
 li {
   list-style-type: none;
 }
-li a {
+li a, div a {
   color: var(--Very-Pale-Cyan);
 }
-li a:hover{
+li a:hover, div a:hover{
     color: var(--Very-Pale-Cyan);
     cursor: pointer;
 }
@@ -145,3 +140,14 @@ li .s-link:hover{
     color: var(--Pink);
 }
 /* footer section end */
+@media (min-width: 768px)
+{
+  .e_card {
+    width: 60%;
+  
+    transform:translateY(50%);
+ }
+ .img {
+  width: 20rem;
+}
+}
